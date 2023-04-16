@@ -7,6 +7,17 @@ return {
     spell = false,         -- sets vim.opt.spell
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
     wrap = true,           -- sets vim.opt.wrap
+    -- Custom options.
+    wildmode = "longest,list,full",
+    wildmenu = true,
+    backspace = "indent,eol,start",
+    cinoptions = ":0t0(sk2sm1",
+    splitbelow = true,
+    splitright = true,
+    autoindent = true,
+    shiftwidth = 8,
+    softtabstop = 8,
+    tabstop = 8,
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
