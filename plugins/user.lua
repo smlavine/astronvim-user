@@ -1,4 +1,7 @@
 return {
+  "Mofiqul/dracula.nvim",
+  "tpope/vim-fugitive",
+  "mfussenegger/nvim-jdtls",
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
