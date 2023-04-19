@@ -16,12 +16,23 @@ return {
       local cmp = require "cmp"
       -- Customize sources to de-prioritize luasnip
       opts.sources = cmp.config.sources {
-        { name = "nvim_lsp", priority = 1000 },
-        { name = "buffer",   priority = 500 },
-        { name = "path",     priority = 250 },
-        { name = "luasnip",  priority = 1 },
+        {
+          name = "nvim_lsp",
+          entry_filter = function(entry, ctx)
+            return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+          end,
+          priority = 1000,
+        },
+        { name = "buffer",  priority = 500, keyword_length = 3 },
+        { name = "path",    priority = 250 },
+        { name = "luasnip", priority = 1 },
       }
+
       return opts
+    end,
+    config = function(_, opts)
+      local cmp = require "cmp"
+      cmp.setup(opts)
     end,
   },
   -- You can disable default plugins as follows:
