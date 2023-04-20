@@ -77,5 +77,6 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.cmd 'source ~/.config/nvim/lua/user/init.vim'
   end,
 }
