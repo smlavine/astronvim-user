@@ -3,9 +3,7 @@ This is my user configuration for [AstroNvim][an] (my preferred
 
 To deploy, first make sure AstroNvim is installed at `~/.config/nvim`.
 Then, copy this directory (or clone this repository) to
-`~/.config/nvim/lua/user`.
-
-That's it.
+`~/.config/nvim/lua/user`. `make` will do that for you.
 
 Previously, I had my home-glued Neovim (originally Vim) config in my
 [dots][dots] repository. But this became unwieldy when I began using
