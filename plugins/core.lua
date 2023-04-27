@@ -28,6 +28,10 @@ return {
         { name = "luasnip", priority = 1 },
       }
 
+      -- Disable completion documentation window -- my laptop screen is too
+      -- small for it. Documentation can still be viewed in normal mode though.
+      opts.window.documentation = cmp.config.disable
+
       return opts
     end,
     config = function(_, opts)
