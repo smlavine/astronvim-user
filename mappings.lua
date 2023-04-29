@@ -20,6 +20,11 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["-"] = { "<cmd>res -1<cr>", desc = "Decrease vertical size of buffer" },
+    ["="] = { "<cmd>res +1<cr>", desc = "Increase vertical size of buffer" },
+    [">"] = { "<cmd>vertical res -1<cr>", desc = "Decrease horizontal size of buffer" },
+    ["<"] = { "<cmd>vertical res +1<cr>", desc = "Increase horizontal size of buffer" },
+    ["+"] = { "<C-w>=", desc = "Reset buffer sizes" },
   },
   t = {
     -- setting a mapping to false will disable it
