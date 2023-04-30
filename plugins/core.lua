@@ -22,7 +22,9 @@ return {
             return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
           end,
           priority = 1000,
-        }, { name = "buffer", priority = 500, keyword_length = 3 }, { name = "path", priority = 250 },
+        },
+        { name = "buffer",  priority = 500, keyword_length = 3 },
+        { name = "path",    priority = 250 },
         { name = "luasnip", priority = 1 },
       }
 
@@ -39,9 +41,7 @@ return {
   },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
-
-  { "mfussenegger/nvim-dap", enabled = false },
-
+  --
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {
   --   "L3MON4D3/LuaSnip",
