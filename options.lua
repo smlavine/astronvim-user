@@ -18,6 +18,7 @@ return {
     shiftwidth = 8,
     softtabstop = 8,
     tabstop = 8,
+    foldcolumn = "0", -- Disable foldcolumn indicator to save horizontal space
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
