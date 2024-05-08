@@ -25,12 +25,9 @@ nnoremap <C-B> :call ToggleColumnWidth()<CR>
 fun! ModalOnSelection()
 	if filereadable("./zm-debug")
 		'<,'>!xp ./zm-debug -F
-		'<,'>!xp ./zm-debug -F
 	elseif filereadable("./zm")
 		'<,'>!xp ./zm -F
-		'<,'>!xp ./zm -F
 	elseif filereadable(expand("~/.local/bin/zm"))
-		'<,'>!xp ~/.local/bin/zm -F
 		'<,'>!xp ~/.local/bin/zm -F
 	endif
 endfun
