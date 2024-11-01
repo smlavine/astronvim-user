@@ -1,3 +1,5 @@
+**This branch is for AstroNvim v3, which [has been deprecated][deprecated].**
+
 This is my user configuration for [AstroNvim][an] (my preferred
 "distribution" of [Neovim][nv]), branched from [here][upstream].
 
@@ -11,6 +13,7 @@ AstroNvim, as I had to keep the entire AstroNvim tree as a submodule.
 Having the user repository separate and the AstroNvim repository
 unmanaged is the intended way of doing things.
 
+[deprecated]: https://docs.astronvim.com/configuration/v4_migration/#module-changes
 [an]: https://astronvim.com
 [nv]: https://neovim.io
 [upstream]: https://github.com/AstroNvim/user_example
