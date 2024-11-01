@@ -22,14 +22,28 @@ nnoremap <C-B> :call ToggleColumnWidth()<CR>
 " Run Modal (https://git.sr.ht/~smlavine/zm) code on selections.
 " zm is in development; if I am in the development folder and there is the
 " executable present, run that; otherwise assume locally installed.
-fun! ModalOnSelection()
-	if filereadable("./zm-debug")
-		'<,'>!xp ./zm-debug -F
-	elseif filereadable("./zm")
-		'<,'>!xp ./zm -F
-	elseif filereadable(expand("~/.local/bin/zm"))
-		'<,'>!xp ~/.local/bin/zm -F
-	endif
-endfun
-vnoremap <F4> :call ModalOnSelection()<CR>
-nnoremap <F4> :call ModalOnSelection()<CR>
+"fun! ModalOnSelection()
+"	if filereadable("./zm-debug")
+"		vnoremap <F4> :'<,'>!xp ./zm-debug -F<CR>
+"		nnoremap <F4> :'<,'>!xp ./zm-debug -F<CR>
+"	elseif filereadable("./zm")
+"		vnoremap <F4> :'<,'>!xp ./zm -F<CR>
+"		nnoremap <F4> :'<,'>!xp ./zm -F<CR>
+"	elseif filereadable(expand("~/.local/bin/zm"))
+"		vnoremap <F4> :'<,'>!xp ~/.local/bin/zm -F<CR>
+"		nnoremap <F4> :'<,'>!xp ~/.local/bin/zm -F<CR>
+"	endif
+"endfun
+"vnoremap <F4> :call ModalOnSelection()<CR>
+"nnoremap <F4> :call ModalOnSelection()<CR>
+
+if filereadable("./zm-debug")
+	vnoremap <F4> :'<,'>!xp ./zm-debug -F<CR>
+	nnoremap <F4> :'<,'>!xp ./zm-debug -F<CR>
+elseif filereadable("./zm")
+	vnoremap <F4> :'<,'>!xp ./zm -F<CR>
+	nnoremap <F4> :'<,'>!xp ./zm -F<CR>
+elseif filereadable(expand("~/.local/bin/zm"))
+	vnoremap <F4> :'<,'>!xp ~/.local/bin/zm -F<CR>
+	nnoremap <F4> :'<,'>!xp ~/.local/bin/zm -F<CR>
+endif
