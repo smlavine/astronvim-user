@@ -1,4 +1,5 @@
-**This branch is for AstroNvim v3, which [has been deprecated][deprecated].**
+**This repository contains my configuration for AstroNvim v3, which [has been deprecated][deprecated].**
+See my v4 config here: <https://git.sr.ht/~smlavine/nvim>
 
 This is my user configuration for [AstroNvim][an] (my preferred
 "distribution" of [Neovim][nv]), branched from [here][upstream].
